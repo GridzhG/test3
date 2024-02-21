@@ -1,0 +1,13 @@
+{
+  "jwt": {
+    "key": "8x4uTswRK3sF8dAJL5rMpvEWcZw5xFCQ"
+  },
+  "steam": {
+    "key": "45DD8879C8BA6ABE5443819EB5E6C174"
+  },
+  "cors": {
+    "auth_url": "http://api.gmdrop.webcenter.website",
+    "frontend_url": "http://gmdrop.webcenter.website",
+    "admin_url": "http://admin.gmdrop.webcenter.website"
+  }
+}

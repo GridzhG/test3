@@ -1,0 +1,130 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Item {
+  id: Int!
+  market_hash_name: String
+  market_name: String
+  icon_url: String
+  exterior: String
+  rarity: String
+  color: String
+  price: Float
+}
+
+type Category {
+  id: Int!
+  name: String
+  sorting: Int
+}
+
+type Case {
+  id: Int!
+  name: String
+  url: String
+  image: String
+  old_price: Float
+  price: Float
+  opened: Float
+  max_opened: Float
+  category: Category!
+  items: [Item!]!
+}
+
+type Drop {
+  id: Int!
+  user: User!
+  item: Item!
+  box: Case
+  price: Float
+  status: Float
+  trade_id: Float
+  type: String
+}
+
+type User {
+  id: Int!
+  steamId: String
+  username: String
+  avatar: String
+  balance: Float
+  opened: Float
+  contracts: Float
+  upgrades: Float
+  trade_url: String
+  role: String
+  is_ban_chat: Float
+  referral_code: String
+  referral_lvl: Float
+  referral_sum: Float
+  referral_payment: Float
+  referral_balance: Float
+  referral_invited: Float
+  bestDrop: Drop
+}
+
+type ReferralBalance {
+  success: Boolean!
+}
+
+type LiveDrop {
+  drops: [Drop!]!
+  opened: Int!
+  bust: Int!
+  upgrades: Int!
+}
+
+type Items {
+  items: [Item!]!
+  pages: Int!
+}
+
+type Message {
+  id: String!
+  user: User!
+  message: String!
+  date: String!
+}
+
+type Giveaway {
+  id: Int!
+  item: Item!
+  members: Int!
+  end_time: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  getUserById(id: Int!): User!
+  currentUser: User!
+  referralBalanceToBalance: ReferralBalance!
+  getLiveDrop: LiveDrop!
+  userInventory: [Drop!]!
+  userInventoryInGame: [Drop!]!
+  userInventoryById(id: Int!): [Drop!]!
+  getItems(minPrice: Float!, sort: String!, page: Int!): Items!
+  casesAll: [Case!]!
+  casesGetByUrl(id: String!): Case!
+  getAllMessages: [Message!]!
+  getGiveaways: [Giveaway!]!
+}
+
+type Mutation {
+  setTradeLink(url: String!): Boolean!
+  userInventorySellItems(ids: [Int!]!): String!
+  userInventoryWithdrawItem(id: Int!): Boolean!
+  casesOpen(opened: Int!, id: Int!): [Item!]!
+  sendMessage(message: String!): Boolean!
+  deleteMessage(id: String!): Boolean!
+  banUserInChat(id: Int!): Boolean!
+  usePromocode(promo: String!): Boolean!
+  setPayment(promo: String!, value: Float!, method: String!, i: String!): String!
+  createBust(items: [Int!]!): Item!
+  upgrade(winItem: Int!, myItem: Int!): Item!
+  joinGiveaway(id: Int!): Boolean!
+}

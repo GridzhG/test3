@@ -1,56 +1,105 @@
 {
-  "name": "opencase-frontend",
-  "version": "0.1.0",
+  "name": "opencase-backend",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
   "private": true,
+  "license": "UNLICENSED",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/src/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@apollo/gateway": "^0.34.0",
     "@chakra-ui/vue": "^0.9.4",
     "@emotion/css": "^11.1.3",
-    "animejs": "^3.2.1",
-    "axios": "^0.21.1",
-    "breadstick": "^0.2.15",
-    "chakra-ui": "^0.3.9",
-    "core-js": "^3.6.5",
-    "number-format.js": "^2.0.9",
-    "regenerator-runtime": "^0.13.9",
-    "socket.io-client": "^2.3.1",
-    "vue": "^2.6.11",
-    "vue-axios": "^3.2.4",
-    "vue-cookie": "^1.1.4",
-    "vue-router": "^3.5.2",
-    "vue-toast-notification": "^0.6.2",
-    "vue-websocket": "^0.2.3"
+    "@liaoliaots/nestjs-redis": "^3.0.0-next.3",
+    "@nestjs/common": "^7.4.4",
+    "@nestjs/core": "^7.4.4",
+    "@nestjs/graphql": "^8.0.2",
+    "@nestjs/jwt": "^8.0.0",
+    "@nestjs/passport": "^8.0.0",
+    "@nestjs/platform-express": "^7.4.4",
+    "@nestjs/platform-socket.io": "^7.6.5",
+    "@nestjs/schedule": "^1.0.0",
+    "@nestjs/terminus": "^8.0.0-next.7",
+    "@nestjs/typeorm": "^8.0.1",
+    "@nestjs/websockets": "^7.6.5",
+    "apollo-server-express": "^2.25.2",
+    "cache-manager": "^3.4.4",
+    "crypto-js": "^4.1.1",
+    "date-and-time": "^1.0.1",
+    "datef": "^3.0.0",
+    "graphql": "^15.5.1",
+    "graphql-tools": "^7.0.5",
+    "ioredis": "^4.27.6",
+    "mysql2": "^2.2.5",
+    "nestjs-redis": "^1.3.3",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-steam": "^1.0.15",
+    "random-float": "^3.0.0",
+    "random-int": "^3.0.0",
+    "redis": "^3.1.2",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "rxjs": "^7.2.0",
+    "socket.io": "^4.1.3",
+    "steam-tradeoffer-manager": "^2.10.3",
+    "ts-morph": "^11.0.3",
+    "typeorm": "^0.2.34"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "@nestjs/cli": "^8.0.0",
+    "@nestjs/schematics": "^8.0.0",
+    "@nestjs/testing": "^8.0.0",
+    "@types/cron": "^1.7.3",
+    "@types/express": "^4.17.13",
+    "@types/ioredis": "^4.26.6",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.0.0",
+    "@types/passport-steam": "^1.0.1",
+    "@types/supertest": "^2.0.11",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "27.0.6",
+    "prettier": "^2.3.2",
+    "supertest": "^6.1.3",
+    "ts-jest": "^27.0.3",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^3.10.1",
+    "typescript": "^4.3.5"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
     ],
-    "parserOptions": {
-      "parser": "babel-eslint"
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
     },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
 }
