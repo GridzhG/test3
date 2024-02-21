@@ -1,0 +1,24 @@
+<svg width="186" height="93" viewBox="0 0 186 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 116.17 49.291)" stroke="#00A3FF" stroke-opacity="0.1"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 110.332 32.44)" stroke="#00A3FF" stroke-opacity="0.68"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 104.826 43.7845)" stroke="#00A3FF" stroke-opacity="0.32"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 98.9876 26.9334)" stroke="#00A3FF" stroke-opacity="0.08"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 93.4813 38.2779)" stroke="#00A3FF" stroke-opacity="0.6"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 87.6434 21.4268)" stroke="#00A3FF" stroke-opacity="0.4"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 82.137 32.7713)" stroke="#00A3FF" stroke-opacity="0.32"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 99.2186 54.2845)" stroke="#00A3FF" stroke-opacity="0.32"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 93.7122 65.6289)" stroke="#00A3FF" stroke-opacity="0.32"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 87.8743 48.7779)" stroke="#00A3FF" stroke-opacity="0.32"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 82.3675 60.1223)" stroke="#00A3FF" stroke-opacity="0.02"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 76.5296 43.2713)" stroke="#00A3FF" stroke-opacity="0.32"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 71.0233 54.6157)" stroke="#00A3FF" stroke-opacity="0.38"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 65.1854 37.7649)" stroke="#00A3FF" stroke-opacity="0.32"/>
+    <rect x="-0.668147" y="0.231472" width="9.38486" height="9.38486" transform="matrix(-0.899619 -0.436675 -0.436675 0.899619 59.679 49.1092)" stroke="#00A3FF" stroke-opacity="0.32"/>
+    <ellipse cx="93" cy="46.5" rx="93" ry="46.5" fill="url(#paint0_radial)"/>
+    <defs>
+        <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(93 46.5) rotate(90) scale(46.5 93)">
+            <stop stop-color="#00A3FF" stop-opacity="0.38"/>
+            <stop offset="1" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+</svg>
